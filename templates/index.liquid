@@ -1,1 +1,6 @@
+{% section 'banner-section' %}
+{% section 'featured-section' %}
 <h1>Hello World</h1>
+{% for product in collections.all.products %}
+  {{ product }}
+{% endfor %}

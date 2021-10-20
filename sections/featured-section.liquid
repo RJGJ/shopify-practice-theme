@@ -1,0 +1,20 @@
+<section class="featured py-5">
+  <div class="container">
+    <h2 class="text-center">Featured</h2>
+    <div class="row">
+      {% paginate collections.featured.products by 3 %}
+        {% for product in collections.featured.products %}
+          <div class="col-4 p-3">
+            <a class="card text-decoration-none text-dark" href="{{ product.url}}">
+              {{ product.images[0] | img_url | img_tag: product.images[0].alt, "card-img-top"}}
+              <div class="card-body pb-3">
+                <h5 class="card-title">{{ product.title }}</h5>
+                <p class="card-text">{{  product.price | money_with_currency }}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      {% endpaginate %}
+    </div>
+  </div>
+</section>

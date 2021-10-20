@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat&display=swap");
+
+// variables
+$primary: #06a77d;
+$secondary: #d5c67a;
+$dark: #0c0c0c;
+$enable-rounded: false;
+
+$btn-padding-y: 15px;
+$btn-padding-x: 30px;
+$btn-font-weight: bold;
+$btn-border-width: 2px;
+
+$card-border-width: 2px;
+$card-border-color: $dark;
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "DM Serif Display", serif;
+}
+p,
+a,
+div,
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+// components
+.btn,
+.card {
+  border: solid $btn-border-width $dark;
+  transition: 250ms;
+
+  &:hover {
+    box-shadow: 5px 5px 0 $dark;
+  }
+}
+
+// sections
+.banner-section {
+  min-height: 100vh;
+  background-position: center top !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("banner-bg.jpg");
+}
+
+@import "./scss/bootstrap.scss";
